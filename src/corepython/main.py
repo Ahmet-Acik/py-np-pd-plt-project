@@ -26,3 +26,4 @@ def test_greet():
 if __name__ == "__main__":
     main()
     test_greet()
+# This code defines a simple greeting function and includes a main function to interact with the user.

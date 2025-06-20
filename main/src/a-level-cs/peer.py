@@ -18,3 +18,4 @@ def send():
 
 threading.Thread(target=listen).start()
 send()
+# This code sets up a simple peer-to-peer communication using sockets.

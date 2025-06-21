@@ -87,3 +87,21 @@ print(tuple(squares_gen))  # output: (0, 1, 4, 9, 16, 25, 36, 49, 64, 81)
 squares_gen_to_dict = ((x, x ** 2) for x in range(10))
 print(squares_gen_to_dict)  # output: <generator object <genexpr> at 0x7f7f4c5d6c10>
 print(dict(squares_gen_to_dict))  # output: {0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81}
+
+# Example of using a generator function
+def square_generator(n):
+    for i in range(n):
+        yield i ** 2
+# Using the generator function
+squares_gen_func = square_generator(10)
+print(list(squares_gen_func))  # output: [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+# Example of using a generator function with a condition
+def even_square_generator(n):
+    for i in range(n):
+        if i % 2 == 0:
+            yield i ** 2
+# Using the generator function with a condition
+even_squares_gen_func = even_square_generator(10)
+print(list(even_squares_gen_func))  # output: [0, 4, 16, 36, 64]
+

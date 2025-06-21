@@ -81,10 +81,14 @@ original = {'a': 1, 'b': 2, 'c': 3}
 swapped = {value: key for key, value in original.items()}
 print(swapped)  # Output: {1: 'a', 2: 'b', 3: 'c'}
 
+
+
 # Create a dictionary of word lengths:
 words = ['apple', 'banana', 'cherry']
 word_lengths = {word: len(word) for word in words}
 print(word_lengths)  # Output: {'apple': 5, 'banana': 6, 'cherry': 6}
+
+
 
 # Filter a dictionary by values:
 original = {'a': 1, 'b': 2, 'c': 3, 'd': 4}

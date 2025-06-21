@@ -23,24 +23,24 @@ print("Hello", "Python", "message", sep=" , ", end=".\n")  # sep and end paramet
 print("Ahmet", "Ahmetoglu", "message", sep=" , ", end=".\n")  # sep and end parameters
 
 
-# help(print)
+help(print)
 
-# info = """
-# This is a multiline comment or docstring
+info = """
+This is a multiline comment or docstring
 
-# print(*args, sep=' ', end='\n', file=None, flush=False)
-#     Prints the values to a stream, or to sys.stdout by default.
+print(*args, sep=' ', end='\n', file=None, flush=False)
+    Prints the values to a stream, or to sys.stdout by default.
 
-#     sep
-#       string inserted between values, default a space.
-#     end
-#       string appended after the last value, default a newline.
-#     file
-#       a file-like object (stream); defaults to the current sys.stdout.
-#     flush
-#       whether to forcibly flush the stream.
+    sep
+      string inserted between values, default a space.
+    end
+      string appended after the last value, default a newline.
+    file
+      a file-like object (stream); defaults to the current sys.stdout.
+    flush
+      whether to forcibly flush the stream.
 
-# """
+"""
 
-# print(info)
+print(info)
 

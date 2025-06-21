@@ -68,6 +68,10 @@ Dictionary Comprehensions
 
 # Examples:
 
+# Generate a dictionary of numbers and their squares:
+squares = {x: x**2 for x in range(1, 11)}
+print(squares)  # Output: {1: 1, 2: 4, 3: 9, 4: 16, 5: 25, 6: 36, 7: 49, 8: 64, 9: 81, 10: 100}
+
 # Create a dictionary of numbers and their squares:
 squares = {x: x**2 for x in range(1, 6)}
 print(squares)  # Output: {1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
@@ -96,6 +100,7 @@ words = ['apple', 'banana', 'apple', 'cherry', 'banana', 'apple']
 word_count = {word: words.count(word) for word in set(words)}
 print(word_count)  # Output: {'cherry': 1, 'banana': 2, 'apple': 3}
 
+# Comparison of Comprehensions in Python
 '''
 Comparison of Comprehensions
 Feature	            List Comprehension	         Set Comprehension	         Dictionary Comprehension

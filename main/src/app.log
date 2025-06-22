@@ -2,3 +2,5 @@
 2025-06-21 19:13:27,967 - __main__ - CRITICAL - This is a critical message
 2025-06-21 19:14:19,261 - __main__ - ERROR - This is an error message
 2025-06-21 19:14:19,261 - __main__ - CRITICAL - This is a critical message
+This is an error message
+This is a critical message

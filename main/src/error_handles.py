@@ -73,7 +73,11 @@ def process_data(data):
 # Example usage
 print(f"process_data([10, 5]) : {process_data([10, 5])}")
 print(f"process_data([10, 0]) : {process_data([10, 0])}")
-print(f"process_data([]) : {process_data([])}")
+try:
+    print(f"process_data([]) : {process_data([])}")
+except ValueError as e:
+    print(f"process_data([]) raised ValueError: {e}")
+
 
 
 
@@ -395,3 +399,25 @@ try:
 except Exception as e:
     print("Custom stack trace:")
     traceback.print_exc()
+
+# Example of a stack trace
+# Create a file handler
+file_handler = logging.FileHandler('app.log')
+file_handler.setLevel(logging.ERROR)
+
+# Create a console handler
+console_handler = logging.StreamHandler()
+console_handler.setLevel(logging.INFO)
+
+# Create a logger
+logger = logging.getLogger('my_logger')
+logger.setLevel(logging.DEBUG)# Add handlers to the logger
+logger.addHandler(file_handler)
+logger.addHandler(console_handler)
+# Log messages with different severity levels
+logger.debug('This is a debug message')
+logger.info('This is an info message')
+logger.warning('This is a warning message')
+logger.error('This is an error message')
+logger.critical('This is a critical message')
+

@@ -344,3 +344,9 @@ product_sales_comp = {
 }
 print(f"product_sales_comp : {product_sales_comp}")  # output: {'Apple': 30000, 'IBM': 12000}
 
+# Example of using dictionary comprehension to create a new dictionary with product sales
+product_sales_comp = {
+    sales["product"]: product_sales_comp.get(sales["product"], 0) + sales["quantity"] * sales["price"]
+    for sales in sales_data
+}
+print(f"product_sales_comp : {product_sales_comp}")  # output: {'Apple': 30000, 'IBM': 12000}

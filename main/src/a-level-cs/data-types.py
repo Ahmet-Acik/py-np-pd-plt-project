@@ -1,3 +1,9 @@
+import numpy as np
+from scipy.io.wavfile import write
+import soundfile as sf
+from PIL import Image
+import pandas as pd
+
 # Numbers: Calculate mean
 numbers = [1, 2, 3, 4, 5]
 mean = sum(numbers) / len(numbers)
@@ -8,33 +14,29 @@ text = "Hello world! Hello Python."
 words = text.split()
 print("Word count:", len(words))
 
-import numpy as np
-from scipy.io.wavfile import write
-
+# Create a simple audio file (WAV)
 samplerate = 44100  # Hz
 duration = 2  # seconds
 frequency = 440  # Hz (A4 note)
 t = np.linspace(0, duration, int(samplerate * duration), endpoint=False)
 data = 0.5 * np.sin(2 * np.pi * frequency * t)
 write('example.wav', samplerate, data.astype(np.float32))
+# Sound: Write audio file (WAV)
 
-import soundfile as sf
+
 # Sound: Read audio file (WAV)
 data, samplerate = sf.read('example.wav')
 print("Audio shape:", data.shape)
 
-from PIL import Image
 
 # Create a new RGB image (100x100) with a red background
 img = Image.new('RGB', (100, 100), color='red')
 img.save('example.jpg')
-
-from PIL import Image
+# Image: Create and save image
 # Image: Open and show image
 img = Image.open('example.jpg')
 img.show()
 
-import pandas as pd
 
 # Create a simple DataFrame and save as data.csv
 df = pd.DataFrame({
@@ -43,7 +45,7 @@ df = pd.DataFrame({
 })
 df.to_csv('data.csv', index=False)
 
-import pandas as pd
+
 # CSV: Read and display data
 df = pd.read_csv('data.csv')
 print(df.head())

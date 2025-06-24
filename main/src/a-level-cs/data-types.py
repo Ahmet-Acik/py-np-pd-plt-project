@@ -24,11 +24,13 @@ data, samplerate = sf.read('example.wav')
 print("Audio shape:", data.shape)
 
 from PIL import Image
+
+# Create a new RGB image (100x100) with a red background
+img = Image.new('RGB', (100, 100), color='red')
+img.save('example.jpg')
+
+from PIL import Image
 # Image: Open and show image
 img = Image.open('example.jpg')
 img.show()
 
-import pandas as pd
-# CSV: Read and display data
-df = pd.read_csv('data.csv')
-print(df.head())

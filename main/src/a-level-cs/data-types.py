@@ -17,3 +17,8 @@ from PIL import Image
 # Image: Open and show image
 img = Image.open('example.jpg')
 img.show()
+
+import pandas as pd
+# CSV: Read and display data
+df = pd.read_csv('data.csv')
+print(df.head())

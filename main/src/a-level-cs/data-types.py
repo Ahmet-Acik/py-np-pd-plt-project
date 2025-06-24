@@ -34,3 +34,16 @@ from PIL import Image
 img = Image.open('example.jpg')
 img.show()
 
+import pandas as pd
+
+# Create a simple DataFrame and save as data.csv
+df = pd.DataFrame({
+    'name': ['Alice', 'Bob', 'Charlie'],
+    'age': [30, 25, 35]
+})
+df.to_csv('data.csv', index=False)
+
+import pandas as pd
+# CSV: Read and display data
+df = pd.read_csv('data.csv')
+print(df.head())

@@ -69,3 +69,10 @@ df.to_json('data.json', orient='records', lines=False)
 # JSON: Read and display data
 df = pd.read_json('data.json', orient='records')
 print(df.head())
+
+# JSON: Read and display data
+import json
+with open('data.json', 'r') as file:
+    data = json.load(file)
+    print(data)
+# Data Types and Representations in Python

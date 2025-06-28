@@ -815,4 +815,57 @@ class CoffeeShop:
         return sum(employee.expenses for employee in self.employees)
     
     def calculate_total_profit(self):
-        return self.calculate_total_sales() - self.calculate_total_expenses()   
+        return self.calculate_total_sales() - self.calculate_total_expenses()
+
+
+    # class OnlineStore:
+
+        # # Properties
+        # name
+        # location
+        # products
+        # customers
+        #
+        # # Methods
+        # add_product(product)
+        # remove_product(product)
+        # add_customer(customer)
+        # remove_customer(customer)
+        # calculate_total_sales()
+        # calculate_total_expenses()
+        # calculate_total_profit()
+class OnlineStore:
+
+    def __init__(self, name, location):
+        self.name = name
+        self.location = location
+        self.products = []
+        self.customers = []
+
+    def add_product(self, product):
+        self.products.append(product)
+
+    def remove_product(self, product):
+        self.products.remove(product)
+
+    def add_customer(self, customer):
+        self.customers.append(customer)
+
+    def remove_customer(self, customer):
+        self.customers.remove(customer)
+
+    def calculate_total_sales(self):
+        return sum(product.price for product in self.products)
+
+    def calculate_total_expenses(self):
+        return sum(customer.expenses for customer in self.customers)
+
+    def calculate_total_profit(self):
+        return self.calculate_total_sales() - self.calculate_total_expenses()
+# Example usage
+# my_online_store = OnlineStore("My Online Store", "New York")
+# my_online_store.add_product("Laptop")
+# my_online_store.add_product("Phone")
+# my_online_store.add_customer("Furkan")
+
+# print(my_online_store.products)

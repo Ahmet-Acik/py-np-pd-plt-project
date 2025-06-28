@@ -104,6 +104,12 @@ words = ['apple', 'banana', 'apple', 'cherry', 'banana', 'apple']
 word_count = {word: words.count(word) for word in set(words)}
 print(word_count)  # Output: {'cherry': 1, 'banana': 2, 'apple': 3}
 
+# Create a dictionary of squares for even numbers:
+even_squares = {x: x**2 for x in range(1, 11) if x % 2 == 0}
+print(even_squares)  # Output: {2: 4, 4: 16, 6: 36, 8: 64, 10: 100}
+
+
+
 # Comparison of Comprehensions in Python
 '''
 Comparison of Comprehensions

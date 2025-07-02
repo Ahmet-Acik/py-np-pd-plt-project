@@ -29,3 +29,13 @@ for item in mapped:
     print(item)
 
 
+
+# filter() function
+def is_even(n):
+    return n % 2 == 0
+
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+filtered = filter(is_even, numbers)
+print(list(filtered))
+filtered = filter(lambda x: x > 5, numbers)
+print(list(filtered))

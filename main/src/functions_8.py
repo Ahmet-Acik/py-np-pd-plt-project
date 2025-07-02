@@ -85,3 +85,11 @@ reversed_string = ''.join(reversed("Hello"))
 print(reversed_string)  # Output: 'olleH'
 
 # sorted() function
+sorted_list = sorted(fruits)
+print(sorted_list)  # Output: ['apple', 'banana', 'cherry']
+# Using sorted with a custom key
+sorted_list = sorted(fruits, key=len)
+print(sorted_list)  # Output: ['apple', 'banana', 'cherry']
+# Using sorted with reverse order
+sorted_list = sorted(fruits, reverse=True)
+print(sorted_list)  # Output: ['cherry', 'banana', 'apple']

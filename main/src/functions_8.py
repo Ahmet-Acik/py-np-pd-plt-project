@@ -39,3 +39,12 @@ filtered = filter(is_even, numbers)
 print(list(filtered))
 filtered = filter(lambda x: x > 5, numbers)
 print(list(filtered))
+
+# reduce() function
+from functools import reduce
+def add(x, y):
+    return x + y
+
+numbers = [1, 2, 3, 4, 5]
+reduced = reduce(add, numbers)
+print(reduced)  # Output: 15

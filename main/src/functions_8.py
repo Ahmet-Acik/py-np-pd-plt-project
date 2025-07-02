@@ -93,3 +93,11 @@ print(sorted_list)  # Output: ['apple', 'banana', 'cherry']
 # Using sorted with reverse order
 sorted_list = sorted(fruits, reverse=True)
 print(sorted_list)  # Output: ['cherry', 'banana', 'apple']
+
+
+# any function
+def is_positive(n):
+    return n > 0
+numbers = [-1, 2, 3, -4, 5]
+print(any(is_positive(n) for n in numbers))  # Output: True
+

@@ -65,3 +65,14 @@ print(list(unzipped))  # Output: [(1, 2, 3), ('a', 'b', 'c')]
 list3 = [4, 5]
 zipped = zip(list1, list2, list3)
 print(list(zipped))  # Output: [(1, 'a', 4), (2, 'b', 5)]
+
+# enumerate() function
+fruits = ['apple', 'banana', 'cherry']
+enumerated = enumerate(fruits)
+print(list(enumerated))  # Output: [(0, 'apple'), (1, 'banana'), (2, 'cherry')]
+# Using enumerate with a start index
+enumerated = enumerate(fruits, start=1)
+print(list(enumerated))  # Output: [(1, 'apple'), (2, 'banana'), (3, 'cherry')]
+# Using enumerate in a loop
+for index, fruit in enumerate(fruits):
+    print(f"Index: {index}, Fruit: {fruit}")

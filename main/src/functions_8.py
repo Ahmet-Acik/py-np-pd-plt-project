@@ -107,3 +107,24 @@ def is_positive(n):
     return n > 0
 numbers = [1, 2, 3, 4, 5]
 print(all(is_positive(n) for n in numbers))  # Output: True
+
+#  sum function
+numbers = [1, 2, 3, 4, 5]
+print(sum(numbers))  # Output: 15
+# Using sum with a start value
+print(sum(numbers, 10))  # Output: 25
+# Using sum with a generator expression
+print(sum(n for n in numbers if n % 2 == 0))  # Output: 6 (sum of even numbers)
+# Using sum with a list of tuples
+tuples = [(1, 2), (3, 4), (5, 6)]
+print(sum(x[0] for x in tuples))  # Output: 9 (sum of first elements)
+# Using sum with a list of dictionaries
+dictionaries = [{'a': 1}, {'a': 2}, {'a': 3}]
+print(sum(d['a'] for d in dictionaries))  # Output: 6 (sum of 'a' values)
+# Using sum with a list of strings (will raise TypeError)
+try:
+    strings = ["1", "2", "3"]
+    print(sum(strings))  # This will raise TypeError
+except TypeError as e:
+    print(f"Error: {e}")
+

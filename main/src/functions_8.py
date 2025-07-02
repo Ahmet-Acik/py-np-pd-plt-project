@@ -101,3 +101,9 @@ def is_positive(n):
 numbers = [-1, 2, 3, -4, 5]
 print(any(is_positive(n) for n in numbers))  # Output: True
 
+
+# all function
+def is_positive(n):
+    return n > 0
+numbers = [1, 2, 3, 4, 5]
+print(all(is_positive(n) for n in numbers))  # Output: True

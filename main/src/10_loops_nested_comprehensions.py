@@ -37,10 +37,10 @@ print(common_elements)  # Output: [3, 4]
 
 # Example 7: Creating a list of squares of even numbers from a list of lists
 nested_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
-squares_of_even_numbers = [
+squares_of_even_numbers_result = [
     num**2 for sublist in nested_list for num in sublist if num % 2 == 0
 ]
-print(squares_of_even_numbers)  # Output: [4, 16, 36, 64]
+print(squares_of_even_numbers_result)  # Output: [4, 16, 36, 64]
 
 # Example 8: Extracting values from a list of dictionaries based on a condition
 data = [
@@ -53,17 +53,17 @@ print(names_of_people_older_than_30)  # Output: ['Charlie']
 
 # Example 9: Generating a multiplication table
 n = 3
-multiplication_table = [(i, j, i * j) for i in range(1, n + 1) for j in range(1, n + 1)]
+table = [(i, j, i * j) for i in range(1, n + 1) for j in range(1, n + 1)]
 print(
-    multiplication_table
+    table
 )  # Output: [(1, 1, 1), (1, 2, 2), (1, 3, 3), (2, 1, 2), (2, 2, 4), (2, 3, 6), (3, 1, 3), (3, 2, 6), (3, 3, 9)]
 
 # Example 10: Filtering and transforming a list of tuples
-n = 3
-multiplication_table = [(i, j, i * j) for i in range(1, n + 1) for j in range(1, n + 1)]
-print(
-    multiplication_table
-)  # Output: [(1, 1, 1), (1, 2, 2), (1, 3, 3), (2, 1, 2), (2, 2, 4), (2, 3, 6), (3, 1, 3), (3, 2, 6), (3, 3, 9)]
+nested_tuples = [[(1, 2), (3, 4)], [(5, 6), (7, 8)], [(9, 10), (11, 12)]]
+filtered_transformed = [
+    (x * 2, y * 2) for sublist in nested_tuples for x, y in sublist if x % 2 != 0
+]
+print(filtered_transformed)  # Output: [(2, 4), (10, 12), (18, 20)]
 
 # Example 11: Extracting Nested Dictionary Values
 nested_dict = {
@@ -253,7 +253,7 @@ def extract_names_older_than_30(nested_dict):
 
 
 # Example 17: Filtering and Transforming Nested Lists of Tuples
-def filter_and_transform_tuples(nested_tuples):
+def filter_and_transform_tuples_example_17(nested_tuples):
     return [
         (x * 2, y * 2) for sublist in nested_tuples for x, y in sublist if x % 2 != 0
     ]

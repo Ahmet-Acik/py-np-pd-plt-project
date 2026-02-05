@@ -78,8 +78,8 @@ flattened_list = [num for sublist in nested_list for num in sublist]
 print(flattened_list)  # Output: [1, 2, 3, 4, 5, 6, 7, 8, 9]
 import numpy as np
 
-np.flatten = nested_list
-print(np.flatten)
+flattened = np.array(nested_list).flatten()
+print(flattened)
 
 nested2_list = [[1,2,3,4],[5,6,7,8],[9,10,11,12],[13,14,15,16]]
 flattened2_list = [i for sublist in nested2_list for i in sublist if i >5 and not i % 2 ==0]

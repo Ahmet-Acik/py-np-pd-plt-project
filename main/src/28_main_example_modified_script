@@ -1,0 +1,24 @@
+"""
+Main Example Modified Script
+
+This script demonstrates importing and using functions from a modified custom module.
+It highlights the use of if __name__ == "__main__" to control execution.
+"""
+
+import sys
+import os
+sys.path.append(os.path.dirname(__file__))  # Add current directory to path
+
+import example_module_modified
+
+def main():
+    """Main function to run the script logic."""
+    print("This is the modified main script.")
+    # Use the greet function from the imported module
+    greeting = example_module_modified.greet("Advanced Python User")
+    print(greeting)
+    # Additional logic
+    print("Module imported successfully!")
+
+if __name__ == "__main__":
+    main()

@@ -19,7 +19,7 @@ def DistinctList(arr):
 
 # keep this function call here 
 try:
-    input_data = map(int, raw_input().split())
+    input_data = list(map(int, input().split()))
 except EOFError:
     input_data = [0, -2, -2, 5, 5, 5]  # Default input for testing
-print DistinctList(input_data)
+print(DistinctList(input_data))

@@ -78,6 +78,12 @@ python-data-science-tutorial/
 └── tests/                    # Test files
 ```
 
+## Data Files
+
+Sample datasets are provided in the `data/` directory for use in Pandas and data analysis examples:
+
+- `sample_data.csv`: A simple CSV file with employee data (name, age, city, salary) for basic data manipulation exercises.
+
 ## Tutorial Files Overview
 
 The files are numbered sequentially for a progressive learning experience:
